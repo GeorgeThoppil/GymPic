@@ -1,5 +1,6 @@
 <!-- views/partials/header.ejs -->
 
+
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
 
@@ -13,20 +14,35 @@
    <ul class="nav navbar-nav navbar-right">
  	  <li><input type="text" class="form-control" id="username" placeholder="Username"></li>
  	   <li><input type="password" class="form-control" id="password" placeholder="Password"></li>
- 	   <li><button type="button" class="btn btn-primary ">Login</button></li>
-	   <li><button type="button" class="btn btn-primary ">Register</button></li>
-	 
-  </ul>
-  
-</div>
+ 	   <li><button type="button" id="Login_Button" class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">Login</button></li>
+	   <li><button type="button" id="Register_Button" class="btn btn-primary">Register</button></li>
 
+  </ul>
+</div>
 </nav>
 
 
-  <div class="header">
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Confirmation</h4>
+            </div>
+            <div class="modal-body">
+                <p>Do you want to save changes you made to document before closing?</p>
+                <p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-	</div>
-	
+
+
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
   <div class="btn-group" role="group">
     <button type="button" class="btn btn-default">PowerLifting</button>
@@ -38,3 +54,7 @@
     <button type="button" class="btn btn-default">CrossFit</button>
   </div>
 </div>
+
+
+
+
