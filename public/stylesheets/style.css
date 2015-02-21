@@ -7,8 +7,18 @@
     margin-top:7px;
     width:100px;
 }
+
+.btn-warning
+{
+	width:150px;
+}
+
+.btn-default {
+   
+
+}
 .navbar {
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
 
 .form-control
@@ -19,12 +29,7 @@
     margin-top:7px;
 }
 
-.col-xs-12
-{
-	background: #0cd2fc;
-	line-height:200px;
 
-}
 .navi
 {
 	 margin: auto;
@@ -41,7 +46,7 @@
 }
 
 p{
-        padding: 50px;
+        padding: 100px;
         font-size: 32px;
         font-weight: bold;
         text-align: center;
@@ -51,6 +56,12 @@ p{
 
 .btn-group{
 	  padding-bottom: 5px;
+}
+
+
+.user_info
+{
+	text-align:center;
 }
 
 
