@@ -9,13 +9,27 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-	$(document).ready(function(){
+	$(document).ready(function(){	
+	
+		if ('<%=GymUsername%>' != 'undefined' )  {
+			document.getElementById('Register_Button').style.display = "none";
+			document.getElementById('Login_Button').style.display = "none";
+			document.getElementById('Login_State').style.display = "show";
+		}
+		else
+		{
+			document.getElementById('Login_State').style.display = "none";
+		}   
+
 		 $('#Login_Button').click(function () {
 	    	$("#Login_Modal").modal('show');
 	    });		
 	    $('#Register_Button').click(function () {
 	    	$("#Register_Modal").modal('show');
-	    });		
+	    });
+	    		
+
 	});
 </script>
+
 

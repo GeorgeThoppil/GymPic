@@ -13,10 +13,6 @@
 	width:150px;
 }
 
-.btn-default {
-   
-
-}
 .navbar {
     margin-bottom: 0px;
 }
@@ -64,4 +60,10 @@ p{
 	text-align:center;
 }
 
-
+#Login_State
+{
+	float:right;
+    color: #ffffff;
+    margin-right:20px;
+    margin-top:15px;
+}

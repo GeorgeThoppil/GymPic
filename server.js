@@ -19,6 +19,8 @@ app.use(sessions({
 }));
 
 
+var ipaddr  = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+var port    = process.env.OPENSHIFT_NODEJS_PORT || 3000;
 
 
 app.use(express.static(__dirname + '/public'));
@@ -40,6 +42,12 @@ var User = require('./modals/Users').Users;
 
 // index page 
 app.get('/', function(req, res) {
+    res.render('index',{
+		GymUsername: req.myGymSession.user	
+	});
+});
+
+app.get('/dashboard', function(req, res) {
     res.render('index');
 });
 
@@ -57,11 +65,20 @@ app.post('/Register', function(req, res) {
 		  console.dir(user);
 		});	
 	
+	req.myGymSession.user = username;
+	req.myGymSession.password = password;
+	req.myGymSession.email = email;
 	
-	mongoose.model('Users').find(function(err,Users){
-		res.send(Users);
+	
+	res.render('dashboard',{
+		GymUsername: req.myGymSession.user	
 	});
+//	mongoose.model('Users').find(function(err,Users){
+//		res.send(req.myGymSession.user);
+//	});
     
 });
 
-app.listen(3000);
+app.listen(port, ipaddr, function() {
+	console.log('started');
+		});
