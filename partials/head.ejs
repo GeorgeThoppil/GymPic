@@ -11,13 +11,15 @@
 <script type="text/javascript">
 	$(document).ready(function(){	
 	
-		if ('<%=GymUsername%>' != 'undefined' )  {
+		if ('<%= user %>' != 'undefined' )  {
 			document.getElementById('Register_Button').style.display = "none";
 			document.getElementById('Login_Button').style.display = "none";
 			document.getElementById('Login_State').style.display = "show";
 		}
 		else
-		{
+		{	
+			document.getElementById('Login_Button').style.display = "show";
+			document.getElementById('Register_Button').style.display = "show";
 			document.getElementById('Login_State').style.display = "none";
 		}   
 

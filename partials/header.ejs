@@ -15,7 +15,7 @@
  	   <li><button type="button" id="Login_Button" class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">Login</button></li>
 	   <li><button type="button" id="Register_Button" class="btn btn-primary">Register</button></li>
 		<div id="Login_State">
-			Welcome, <a href="#"><%=GymUsername%></a>
+			Welcome, <a href="/Dashboard"><%= user %></a>
 		</div>
   </ul>
 </div>
@@ -32,8 +32,8 @@
             <div class="modal-body">
               <form method="post" action='/Login' name="login_form">
               <div class="user_info">
-	              <input type="text" class="span3" name="eid" id="email" placeholder="Username"><br>
-	              <br><input type="password" class="span3" name="passwd" placeholder="Password"><br>
+	              <input type="text" class="span3" name="email" id="email" placeholder="Username"><br>
+	              <br><input type="password" class="span3" name="password" placeholder="Password"><br>
 	               <br><button type="submit" class="btn btn-success">Sign in</button>
 	                <a class="btn btn-default" href="#">Forgot Login?</button></a>
 	              <br>
@@ -56,9 +56,9 @@
             <div class="modal-body">
               <form method="post" action='/Register' name="register_form">
               <div class="user_info">
-	              <input type="text" class="span3" name="eid" id="email" placeholder="Email"><br>
-	              <br><input type="text" class="span3" name="uid" id="username" placeholder="Username"><br>
-	              <br><input type="password" class="span3" name="pid" id="password" placeholder="Password"><br>
+	              <input type="text" class="span3" name="email" id="email" placeholder="Email"><br>
+	              <br><input type="text" class="span3" name="username" id="username" placeholder="Username"><br>
+	              <br><input type="password" class="span3" name="password" id="password" placeholder="Password"><br>
 	               <br><button type="submit" class="btn btn-success">Register</button>
 	               
 	              <br>
