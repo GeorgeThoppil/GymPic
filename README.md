@@ -1,15 +1,8 @@
 
 
-# MyThreeLifts
+# Gym Website
 
-
-
-## Usage
-
-
-
-## Developing
-
+Website created with node js, passport and mongodb
 
 
 ### Tools
